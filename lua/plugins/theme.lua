@@ -23,7 +23,7 @@ return {
                     mason = true,
                     neotree = true,
                     treesitter_context = true,
-                    lsp_trouble = true,
+                    lsp_trouble = false,
                     illuminate = true,
                     which_key = true,
                 }

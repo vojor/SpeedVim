@@ -11,7 +11,7 @@ return {
     },
     -- 自动匹配括号
     {
-        "altermo/ultimate-autopair.nvim",
+        "windwp/nvim-autopairs",
         lazy = true,
         event = { "InsertEnter", "CmdlineEnter" },
         opts = {}
