@@ -1,10 +1,4 @@
 return {
-    -- 改进了与Telescope、fzf等的内置接口
-    {
-        "stevearc/dressing.nvim",
-        lazy = true,
-        opts = {}
-    },
     -- neovim的UI组件库
     {
         "MunifTanjim/nui.nvim",
