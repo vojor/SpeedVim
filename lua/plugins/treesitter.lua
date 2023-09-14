@@ -13,7 +13,7 @@ return {
         config = function()
             require("nvim-treesitter.configs").setup({
                 sync_install = true,
-                ensure_installed = { "c", "cpp", "python", "lua", "vim", "cmake", "bash", "markdown", "markdown_inline",
+                ensure_installed = { "c", "cpp", "lua", "vim", "cmake", "bash", "markdown", "markdown_inline",
                     "regex" },
                 ignore_install = {},
                 auto_install = false,

@@ -5,7 +5,6 @@ return {
         event = "VeryLazy",
         opts = {
             stages = "fade",
-            -- 消息框持续时间,默认5000(毫秒)
             timeout = 10000
         }
     }

@@ -38,11 +38,9 @@ return {
     {
         "folke/todo-comments.nvim",
         lazy = true,
-        cmd = { "TodoTrouble", "TodoTelescope" },
         event = { "BufReadPost", "BufNewFile" },
         opts = {
             keywords = {
-                -- alt ： 别名
                 FIX = {
                     icon = " ",
                     color = "#DC2626",
