@@ -1,8 +1,8 @@
 return {
     -- 快速跳转
     {
-        "phaazon/hop.nvim",
-        branch = "v2",
+        "smoka7/hop.nvim",
+        version = "*",
         lazy = true,
         keys = {
             { "<leader>hw", "<cmd>HopWord<CR>",      desc = "Search And Jump Word" },
@@ -19,6 +19,7 @@ return {
     -- 文本字符替换
     {
         "nvim-pack/nvim-spectre",
+        cmd = "Spectre",
         lazy = true,
         keys = {
             { "<leader>ro", mode = "n", desc = "Toggle Spectre" },
