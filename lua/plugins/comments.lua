@@ -11,23 +11,16 @@ return {
             require("Comment").setup({
                 ignore = "^$",
                 toggler = {
-                    -- 切换行注释
                     line = "gcc",
-                    --- 切换块注释
                     block = "gbc"
                 },
                 opleader = {
-                    -- 可视和普通模式下的行注释
                     line = "gc",
-                    -- 可视和普通模式下的块注释
                     block = "gb"
                 },
                 extra = {
-                    -- 在当前行上方新增行注释
                     above = "gcO",
-                    -- 在当前行下方新增行注释
                     below = "gco",
-                    -- 在当前行行尾新增行注释
                     eol = "gcA"
                 },
                 pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
