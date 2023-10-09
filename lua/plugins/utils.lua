@@ -64,8 +64,6 @@ return {
     -- 显示缩进线
     {
         "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        lazy = true,
         event = { "BufReadPost", "BufNewFile" },
         opts = {
             indent = {
@@ -73,7 +71,51 @@ return {
                 tab_char = "│",
             },
             scope = { enabled = false },
-        }
+            exclude = {
+                filetypes = {
+                    "help",
+                    "alpha",
+                    "dashboard",
+                    "neo-tree",
+                    "Trouble",
+                    "lazy",
+                    "mason",
+                    "notify",
+                    "toggleterm",
+                    "lazyterm",
+                },
+            },
+        },
+        main = "ibl",
+    },
+    {
+        "echasnovski/mini.indentscope",
+        version = false, -- wait till new 0.7.0 release to put it back on semver
+        event = { "BufReadPost", "BufNewFile" },
+        opts = {
+            -- symbol = "▏",
+            symbol = "│",
+            options = { try_as_border = true },
+        },
+        init = function()
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = {
+                    "help",
+                    "alpha",
+                    "dashboard",
+                    "neo-tree",
+                    "Trouble",
+                    "lazy",
+                    "mason",
+                    "notify",
+                    "toggleterm",
+                    "lazyterm",
+                },
+                callback = function()
+                    vim.b.miniindentscope_disable = true
+                end,
+            })
+        end,
     },
     -- 彩虹括号
     {
