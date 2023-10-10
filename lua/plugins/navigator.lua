@@ -11,7 +11,7 @@ return {
             { "nvim-lspconfig" }
         },
         opts = {
-            debug = true,
+            debug = false,
             lsp = {
                 servers = { "vimls", "lua_ls", "bashls", "clangd", "neocmake" }
             }

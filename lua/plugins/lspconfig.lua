@@ -10,7 +10,7 @@ return {
                 cmd = { "LspInstall", "LspUninstall" },
                 dependencies = { "mason.nvim" },
                 opts = {
-                    ensure_installed = { "lua_ls", "bashls", "vimls" },
+                    ensure_installed = { "lua_ls", "vimls" },
                     automatic_installation = false,
                 }
             }

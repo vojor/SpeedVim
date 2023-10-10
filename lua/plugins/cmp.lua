@@ -1,6 +1,5 @@
 return {
     {
-        -- lua片段支持插件
         "L3MON4D3/luasnip",
         event = "InsertEnter",
         dependencies = {
@@ -9,7 +8,7 @@ return {
         config = function()
             require("luasnip.loaders.from_vscode").lazy_load()
             require("luasnip").setup({
-                history = true,
+                update_events = { "TextChanged", "TextChangedI" },
                 delete_check_events = "TextChanged"
             })
         end
@@ -19,13 +18,13 @@ return {
         "hrsh7th/nvim-cmp",
         event = { "InsertEnter", "CmdlineEnter" },
         dependencies = {
-            { "onsails/lspkind.nvim",     lazy = true }, -- 为补全添加类似vscode的图标
-            { "saadparwaiz1/cmp_luasnip", lazy = true }, -- nvim-cmp的luasnip完成源
-            { "hrsh7th/cmp-nvim-lsp",     lazy = true }, --替换内置omnifunc,获得更多补全
-            { "hrsh7th/cmp-buffer",       lazy = true }, --缓冲区补全
-            { "hrsh7th/cmp-cmdline",      lazy = true }, --命令补全
-            { "hrsh7th/cmp-path",         lazy = true }, --路径补全
-            { "f3fora/cmp-spell",         lazy = true }, -- 拼写建议
+            { "onsails/lspkind.nvim",      lazy = true }, -- 为补全添加类似vscode的图标
+            { "saadparwaiz1/cmp_luasnip",  lazy = true }, -- nvim-cmp的luasnip完成源
+            { "hrsh7th/cmp-nvim-lsp",      lazy = true }, --替换内置omnifunc,获得更多补全
+            { "hrsh7th/cmp-buffer",        lazy = true }, --缓冲区补全
+            { "hrsh7th/cmp-cmdline",       lazy = true }, --命令补全
+            { "FelipeLema/cmp-async-path", lazy = true }, --路径补全
+            { "f3fora/cmp-spell",          lazy = true }, -- 拼写建议
         },
         config = function()
             local luasnip = require("luasnip")
@@ -35,7 +34,7 @@ return {
                 {
                     snippet = {
                         expand = function(args)
-                            require 'luasnip'.lsp_expand(args.body)
+                            luasnip.lsp_expand(args.body)
                         end
                     },
                     window = {
@@ -46,12 +45,9 @@ return {
                         {
                             {
                                 name = "luasnip",
-                                option = {
-                                    show_autosnippets = true,
-                                }
                             },
                             { name = "nvim_lsp" },
-                            { name = "path" },
+                            { name = "async_path" },
                             {
                                 name = "buffer",
                                 option = {
@@ -128,7 +124,7 @@ return {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = cmp.config.sources(
                     {
-                        { name = 'path' }
+                        { name = 'async_path' }
                     },
                     {
                         { name = 'cmdline' }

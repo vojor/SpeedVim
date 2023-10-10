@@ -46,7 +46,7 @@ vim.opt.swapfile        = false
 -- 显示特殊字符
 vim.opt.list            = true
 -- 空格占用以.显示
-vim.opt.listchars       = "space:·,tab:··,eol:↴"
+vim.opt.listchars       = "space:·,tab:▸ ,eol:↴"
 -- complete plus
 vim.o.wildmenu          = true
 -- 终端24位色彩支持
@@ -63,6 +63,8 @@ vim.o.shiftround        = true
 vim.o.showmatch         = true
 -- 光标在行首尾时<Left><Right>可以跳到下一行
 vim.o.whichwrap         = "<,>,[,]"
+-- 在视觉块模式下，允许光标在没有文字的地方移动
+vim.o.virtualedit       = "block"
 -- 补全最多显示16行
 vim.o.pumheight         = 16
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
