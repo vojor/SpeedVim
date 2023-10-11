@@ -27,7 +27,6 @@ return {
                     new_section("Recent files ", "Telescope oldfiles", "Inquiry"),
                     new_section("Grep text ", "Telescope live_grep", "Inquiry"),
                     new_section("Open last projects ", "Telescope projects", "Inquiry"),
-                    new_section("MRU ", "Telescope frecency", "Inquiry"),
                     new_section("Settings ", "e $MYVIMRC", "Config"),
                     new_section("Lazy 鈴", "Lazy", "Config"),
                     new_section("New file ", "ene | startinsert", "Built-in"),
@@ -122,7 +121,6 @@ return {
                     },
                     handlers = {
                         gitsigns = true,
-                        search = true
                     }
                 }
             )

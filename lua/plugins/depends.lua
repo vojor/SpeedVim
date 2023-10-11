@@ -9,11 +9,6 @@ return {
         "nvim-lua/plenary.nvim",
         lazy = true
     },
-    -- 用户保存会话，输入历史
-    {
-        "kkharji/sqlite.lua",
-        lazy = true
-    },
     -- 图标支持插件
     {
         "nvim-tree/nvim-web-devicons",

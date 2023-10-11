@@ -8,7 +8,6 @@ return {
         dependencies = {
             { "nvim-telescope/telescope-ui-select.nvim",    lazy = true },
             { "nvim-telescope/telescope-file-browser.nvim", lazy = true },
-            { "nvim-telescope/telescope-frecency.nvim",     lazy = true },
         },
         config = function()
             require('telescope').setup {
@@ -36,7 +35,6 @@ return {
             require("telescope").load_extension("ui-select")
             require("telescope").load_extension("notify")
             require("telescope").load_extension('file_browser')
-            require("telescope").load_extension("frecency")
             require('telescope').load_extension("projects")
         end,
         keys = {
@@ -49,7 +47,6 @@ return {
             { "<leader>sn", "<cmd>Telescope notify theme=ivy<CR>",     desc = "Find Notify History" },
             { "<leader>sp", "<cmd>Telescope projects<CR>",             desc = "Find Projects" },
             { "<leader>se", "<cmd>Telescope file_browser<CR>",         desc = "Find File browser Tree" },
-            { "<leader>sr", "<cmd>Telescope frecency theme=ivy<CR>",   desc = "Find Frecency" }
         }
     }
 }
