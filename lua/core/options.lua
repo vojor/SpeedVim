@@ -12,7 +12,7 @@ vim.o.relativenumber = true
 -- 显示标尺
 vim.o.ruler          = true
 -- 无操作时候交换文件写入磁盘等待的时间
-vim.o.updatetime     = 100
+vim.o.updatetime     = 200
 -- 高亮当前文本行
 vim.o.cursorline     = true
 -- 等待按键时长的时间

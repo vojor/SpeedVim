@@ -95,35 +95,10 @@ return {
     {
         "petertriho/nvim-scrollbar",
         event = "VeryLazy",
-        config = function()
-            local colors = {
-                Handle = "#EE9088",
-                Search = "#1FC867",
-                Error = "#FD6883",
-                Warn = "#FFD886",
-                Info = "#A9DC76",
-                Hint = "#78DCE8",
-                Misc = "#AB9DF2"
+        opts = {
+            handlers = {
+                gitsigns = true,
             }
-            require("scrollbar").setup(
-                {
-                    handle = {
-                        -- 滚动条颜色
-                        color = colors.Handle
-                    },
-                    marks = {
-                        Search = { color = colors.Search },
-                        Error = { color = colors.Error },
-                        Warn = { color = colors.Warn },
-                        Info = { color = colors.Info },
-                        Hint = { color = colors.Hint },
-                        Misc = { color = colors.Misc }
-                    },
-                    handlers = {
-                        gitsigns = true,
-                    }
-                }
-            )
-        end
+        }
     }
 }
