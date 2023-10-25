@@ -13,18 +13,17 @@ return {
             })
         end
     },
-    --代码补全系列插件
     {
         "hrsh7th/nvim-cmp",
         event = { "InsertEnter", "CmdlineEnter" },
         dependencies = {
-            { "onsails/lspkind.nvim",      lazy = true }, -- 为补全添加类似vscode的图标
-            { "saadparwaiz1/cmp_luasnip",  lazy = true }, -- nvim-cmp的luasnip完成源
-            { "hrsh7th/cmp-nvim-lsp",      lazy = true }, --替换内置omnifunc,获得更多补全
-            { "hrsh7th/cmp-buffer",        lazy = true }, --缓冲区补全
-            { "hrsh7th/cmp-cmdline",       lazy = true }, --命令补全
-            { "FelipeLema/cmp-async-path", lazy = true }, --路径补全
-            { "f3fora/cmp-spell",          lazy = true }, -- 拼写建议
+            { "onsails/lspkind.nvim",      lazy = true },
+            { "saadparwaiz1/cmp_luasnip",  lazy = true },
+            { "hrsh7th/cmp-nvim-lsp",      lazy = true },
+            { "hrsh7th/cmp-buffer",        lazy = true },
+            { "hrsh7th/cmp-cmdline",       lazy = true },
+            { "FelipeLema/cmp-async-path", lazy = true },
+            { "f3fora/cmp-spell",          lazy = true },
         },
         config = function()
             local luasnip = require("luasnip")
@@ -43,20 +42,10 @@ return {
                     },
                     sources = cmp.config.sources(
                         {
-                            {
-                                name = "luasnip",
-                            },
+                            { name = "luasnip" },
                             { name = "nvim_lsp" },
                             { name = "async_path" },
-                            {
-                                name = "buffer",
-                                option = {
-                                    keyword_pattern = [[\k\+]],
-                                    get_bufnrs = function()
-                                        return vim.api.nvim_list_bufs()
-                                    end
-                                }
-                            },
+                            { name = "buffer" },
                             { name = "spell" },
                         }
                     ),

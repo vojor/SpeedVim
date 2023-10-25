@@ -64,7 +64,7 @@ return {
             { "<leader>nf", "<cmd>Neotree float<CR>",  desc = "Open Float Neo Tree" },
         },
         init = function()
-            if vim.fn.argc() == 1 then
+            if vim.fn.argc(-1) == 1 then
                 local stat = vim.loop.fs_stat(vim.fn.argv(0))
                 if stat and stat.type == "directory" then
                     require("neo-tree")
@@ -88,16 +88,6 @@ return {
             source_selector = {
                 winbar = true,
                 statusline = true
-            }
-        }
-    },
-    -- 显示滚动条
-    {
-        "petertriho/nvim-scrollbar",
-        event = "VeryLazy",
-        opts = {
-            handlers = {
-                gitsigns = true,
             }
         }
     }

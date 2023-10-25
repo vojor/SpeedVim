@@ -24,10 +24,6 @@ return {
             { "<leader>lgm", "<cmd>Lspsaga term_toggle<CR>",             desc = "Lspsaga Float Terminal" },
             { "<leader>lgn", "<cmd>Lspsaga finder<CR>",                  desc = "Search Finder Definition,<C-t> BackWard" }
         },
-        opts = {
-            ui = {
-                border = "rounded"
-            }
-        }
+        opts = {}
     },
 }

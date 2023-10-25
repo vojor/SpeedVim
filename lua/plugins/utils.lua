@@ -33,6 +33,7 @@ return {
         opts = {
             defaults = {
                 mode = { "n", "v" },
+                ["<leader>a"] = { name = "+autotool" },
                 ["<leader>b"] = { name = "+buffer" },
                 ["<leader>c"] = { name = "+command" },
                 ["<leader>g"] = { name = "+git" },
@@ -74,15 +75,11 @@ return {
             exclude = {
                 filetypes = {
                     "help",
-                    "alpha",
-                    "dashboard",
                     "neo-tree",
-                    "Trouble",
                     "lazy",
                     "mason",
                     "notify",
                     "toggleterm",
-                    "lazyterm",
                 },
             },
         },

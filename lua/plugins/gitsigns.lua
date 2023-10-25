@@ -5,7 +5,6 @@ return {
         event = "VeryLazy",
         config = function()
             require("gitsigns").setup()
-            require("scrollbar.handlers.gitsigns").setup()
         end,
         keys = {
             { "<leader>gi", "<cmd>Gitsigns<CR>",                           desc = "Open Gitsigns Select Args" },
