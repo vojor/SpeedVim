@@ -66,9 +66,6 @@ return {
                     },
                     -- 绑定补全相关的按键
                     mapping = cmp.mapping.preset.insert({
-                        ['<C-u>'] = cmp.mapping.scroll_docs(-4), --Up
-                        ['<C-d>'] = cmp.mapping.scroll_docs(4),  --Down
-                        -- C-b (back) C-f (forward) for snippet placeholder navigation.
                         ['<C-Space>'] = cmp.mapping.complete(),
                         ['<C-e>'] = cmp.mapping.abort(),            --关闭补全
                         ["<C-p>"] = cmp.mapping.select_prev_item(), --选择上一个
