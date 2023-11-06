@@ -16,7 +16,7 @@ require("lazy").setup({
         { import = "plugins" }
     },
     install = {
-        colorscheme = { "catppuccin" },
+        colorscheme = { "monokai-pro", "habamax" },
     },
     ui = {
         border = "rounded",
