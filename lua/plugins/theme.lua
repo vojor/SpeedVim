@@ -1,33 +1,22 @@
 return {
-    -- 主题
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
+        "loctvl842/monokai-pro.nvim",
         priority = 1000,
         config = function()
-            require("catppuccin").setup({
-                flavour = "macchiato",
+            require("monokai-pro").setup({
                 styles = {
-                    functions = { "bold" },
-                    keywords = { "bold" },
+                    comment = { italic = true },
+                    keyword = { italic = false, bold = true },
+                    type = { italic = false },
+                    storageclass = { italic = true },
+                    structure = { italic = true },
+                    parameter = { italic = true },
+                    annotation = { italic = true },
+                    tag_attribute = { italic = true },
                 },
-                integrations = {
-                    cmp = true,
-                    gitsigns = true,
-                    treesitter = true,
-                    notify = true,
-                    mini = true,
-                    hop = true,
-                    lsp_saga = true,
-                    mason = true,
-                    neotree = true,
-                    treesitter_context = true,
-                    lsp_trouble = false,
-                    illuminate = true,
-                    which_key = true,
-                }
+                filter = "octagon",
             })
-            vim.cmd("colorscheme catppuccin")
-        end
-    }
+            vim.cmd("colorscheme monokai-pro")
+        end,
+    },
 }
