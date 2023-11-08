@@ -65,6 +65,7 @@ return {
     -- 显示缩进线
     {
         "lukas-reineke/indent-blankline.nvim",
+        lazy = true,
         event = { "BufReadPost", "BufNewFile" },
         opts = {
             indent = {
@@ -79,7 +80,9 @@ return {
                     "lazy",
                     "mason",
                     "notify",
-                    "toggleterm",
+                    "starter",
+                    "sagaoutline",
+                    "qf"
                 },
             },
         },
@@ -98,11 +101,12 @@ return {
                 pattern = {
                     "help",
                     "neo-tree",
-                    "Trouble",
                     "lazy",
                     "mason",
                     "notify",
-                    "toggleterm",
+                    "starter",
+                    "sagaoutline",
+                    "qf"
                 },
                 callback = function()
                     vim.b.miniindentscope_disable = true

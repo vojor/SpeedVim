@@ -10,19 +10,6 @@ return {
         config = function()
             require("Comment").setup({
                 ignore = "^$",
-                toggler = {
-                    line = "gcc",
-                    block = "gbc"
-                },
-                opleader = {
-                    line = "gc",
-                    block = "gb"
-                },
-                extra = {
-                    above = "gcO",
-                    below = "gco",
-                    eol = "gcA"
-                },
             })
         end
     },
