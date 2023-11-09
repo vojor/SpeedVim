@@ -1,22 +1,14 @@
 return {
     {
-        "loctvl842/monokai-pro.nvim",
+        "ellisonleao/gruvbox.nvim",
         priority = 1000,
         config = function()
-            require("monokai-pro").setup({
-                styles = {
-                    comment = { italic = true },
-                    keyword = { italic = false, bold = true },
-                    type = { italic = false },
-                    storageclass = { italic = true },
-                    structure = { italic = true },
-                    parameter = { italic = true },
-                    annotation = { italic = true },
-                    tag_attribute = { italic = true },
-                },
-                filter = "octagon",
+            require("gruvbox").setup({
+                italic = {
+                    strings = false,
+                }
             })
-            vim.cmd("colorscheme monokai-pro")
-        end,
-    },
+            vim.cmd("colorscheme gruvbox")
+        end
+    }
 }
