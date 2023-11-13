@@ -16,7 +16,7 @@ require("lazy").setup({
         { import = "plugins" }
     },
     install = {
-        colorscheme = { "monokai-pro", "habamax" },
+        colorscheme = { "onedark", "habamax" },
     },
     ui = {
         border = "rounded",
@@ -57,3 +57,4 @@ require("lazy").setup({
         }
     }
 })
+vim.keymap.set("n", "<leader>ml", "<cmd>Lazy<CR>", { desc = "Open Lazy" })

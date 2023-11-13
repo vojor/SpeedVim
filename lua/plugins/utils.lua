@@ -41,7 +41,7 @@ return {
                 ["<leader>i"] = { name = "+illuminate" },
                 ["<leader>l"] = { name = "+lsp" },
                 ["<leader>lg"] = { name = "+lspsaga" },
-                ["<leader>m"] = { name = "+mason" },
+                ["<leader>m"] = { name = "+manager" },
                 ["<leader>n"] = { name = "+dir" },
                 ["<leader>r"] = { name = "+replace" },
                 ["<leader>s"] = { name = "+search" },
@@ -55,12 +55,6 @@ return {
             wk.setup(opts)
             wk.register(opts.defaults)
         end
-    },
-    -- 完善旧的 quickfix 窗口
-    {
-        "kevinhwang91/nvim-bqf",
-        lazy = true,
-        ft = "qf"
     },
     -- 显示缩进线
     {
@@ -80,7 +74,7 @@ return {
                     "lazy",
                     "mason",
                     "notify",
-                    "starter",
+                    "alpha",
                     "sagaoutline",
                     "qf"
                 },
@@ -104,7 +98,7 @@ return {
                     "lazy",
                     "mason",
                     "notify",
-                    "starter",
+                    "alpha",
                     "sagaoutline",
                     "qf"
                 },

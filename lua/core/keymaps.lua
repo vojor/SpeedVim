@@ -6,8 +6,9 @@ vim.keymap.set("n", '<leader>cE', '<cmd>e!<CR>')
 vim.keymap.set("n", '<leader>cq', '<cmd>q<CR>')
 vim.keymap.set("n", '<leader>cQ', '<cmd>q!<CR>')
 vim.keymap.set("n", '<leader>cx', '<cmd>x<CR>')
+vim.keymap.set("n", '<leader>cc', '<cmd>copen<CR>')
 -- 健康检查
-vim.keymap.set("n","<leader>ch", "<cmd>checkhealth<CR>")
+vim.keymap.set("n", "<leader>ch", "<cmd>checkhealth<CR>")
 
 
 -- 退出终端插入模式
