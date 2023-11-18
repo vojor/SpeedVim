@@ -7,6 +7,7 @@ return {
         keys = {
             { "[e",          "<cmd>Lspsaga diagnostic_jump_prev<CR>",    desc = "Diagnotics Jump Prev" },
             { "]e",          "<cmd>Lspsaga diagnostic_jump_next<CR>",    desc = "Diagnotics Jump Next" },
+            { "<leader>lga", "<cmd>Lspsaga code_action<CR>",             desc = "Code Action" },
             { "<leader>lgb", "<cmd>Lspsaga show_buf_diagnostics<CR>",    desc = "Show Buffer Diagnotics" },
             { "<leader>lgd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", desc = "Show Cursor Local Diagnotics" },
             { "<leader>lgr", "<cmd>Lspsaga rename<CR>",                  desc = "Lspsaga Rename" },
