@@ -95,29 +95,14 @@ return {
                     })
                 }
             )
-            -- 命令行 / ? 模式提示
             cmp.setup.cmdline({ "/", "?" }, {
                 mapping = cmp.mapping.preset.cmdline(),
-                sources = cmp.config.sources(
-                    {
-                        { name = 'buffer' }
-                    }
-                )
-            }
-            )
-            -- 命令行 : 模式提示
+                sources = cmp.config.sources({ { name = 'buffer' } })
+            })
             cmp.setup.cmdline(":", {
                 mapping = cmp.mapping.preset.cmdline(),
-                sources = cmp.config.sources(
-                    {
-                        { name = 'async_path' }
-                    },
-                    {
-                        { name = 'cmdline' }
-                    }
-                )
-            }
-            )
+                sources = cmp.config.sources({ { name = 'async_path' } }, { { name = 'cmdline' } })
+            })
         end
     }
 }

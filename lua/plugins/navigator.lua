@@ -13,7 +13,7 @@ return {
         opts = {
             debug = false,
             lsp = {
-                servers = { "vimls", "lua_ls", "bashls", "clangd", "neocmake", "yamlls" }
+                servers = { "vimls", "lua_ls", "bashls", "clangd", "neocmake", "yamlls", "pyright" }
             }
         }
     }
