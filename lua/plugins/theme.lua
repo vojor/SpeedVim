@@ -1,17 +1,43 @@
 return {
     {
-        "navarasu/onedark.nvim",
+        "catppuccin/nvim",
+        name = "catppuccin",
         priority = 1000,
         config = function()
-            require("onedark").setup({
-                style = "dark",
-                code_style = {
-                    comments = "italic",
-                    keywords = "bold",
-                    functions = "bold",
+            require("catppuccin").setup({
+                flavour = "macchiato",
+                styles = {
+                    comments = { "italic" },
+                    keywords = { "bold" },
+                    functions = { "bold" },
+                },
+                integrations = {
+                    cmp = true,
+                    dashboard = false,
+                    flash = false,
+                    hop = true,
+                    lsp_saga = true,
+                    mason = true,
+                    gitsigns = true,
+                    neotree = true,
+                    nvimtree = false,
+                    treesitter = true,
+                    treesitter_context = true,
+                    which_key = true,
+                    neogit = false,
+                    notify = true,
+                    indent_blankline = {
+                        enabled = true,
+                        scope_color = "",
+                        colored_indent_levels = true,
+                    },
+                    mini = {
+                        enabled = true,
+                        indentscope_color = "",
+                    },
                 },
             })
-            require("onedark").load()
+            vim.cmd.colorscheme("catppuccin")
         end,
     }
 }
