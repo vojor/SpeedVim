@@ -38,7 +38,7 @@ return {
                 ["<leader>c"] = { name = "+command" },
                 ["<leader>g"] = { name = "+git" },
                 ["<leader>h"] = { name = "+hop" },
-                ["<leader>i"] = { name = "+illuminate" },
+                ["<leader>i"] = { name = "+highlight" },
                 ["<leader>l"] = { name = "+lsp" },
                 ["<leader>lg"] = { name = "+lspsaga" },
                 ["<leader>m"] = { name = "+manager" },
@@ -58,55 +58,10 @@ return {
     },
     -- 显示缩进线
     {
-        "lukas-reineke/indent-blankline.nvim",
+        "shellRaining/hlchunk.nvim",
         lazy = true,
         event = { "BufReadPost", "BufNewFile" },
-        opts = {
-            indent = {
-                char = "│",
-                tab_char = "│",
-            },
-            scope = { enabled = false },
-            exclude = {
-                filetypes = {
-                    "help",
-                    "neo-tree",
-                    "lazy",
-                    "mason",
-                    "notify",
-                    "alpha",
-                    "sagaoutline",
-                    "qf"
-                },
-            },
-        },
-        main = "ibl",
-    },
-    {
-        "echasnovski/mini.indentscope",
-        version = false,
-        event = { "BufReadPost", "BufNewFile" },
-        opts = {
-            symbol = "│",
-            options = { try_as_border = true },
-        },
-        init = function()
-            vim.api.nvim_create_autocmd("FileType", {
-                pattern = {
-                    "help",
-                    "neo-tree",
-                    "lazy",
-                    "mason",
-                    "notify",
-                    "alpha",
-                    "sagaoutline",
-                    "qf"
-                },
-                callback = function()
-                    vim.b.miniindentscope_disable = true
-                end,
-            })
-        end,
+        opts = {}
     },
     -- 彩虹括号
     {

@@ -3,7 +3,9 @@ return {
     {
         "NvChad/nvim-colorizer.lua",
         lazy = true,
-        event = { "BufReadPost", "BufNewFile" },
+        keys = {
+            { "<leader>ic", "<cmd>ColorizerToggle<CR>", desc = "Toggle Colorizer" }
+        },
         opts = {}
     }
 }

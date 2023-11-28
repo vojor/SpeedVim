@@ -3,9 +3,6 @@ return {
     {
         "lewis6991/gitsigns.nvim",
         event = "VeryLazy",
-        config = function()
-            require("gitsigns").setup()
-        end,
         keys = {
             { "<leader>gi", "<cmd>Gitsigns<CR>",                           desc = "Open Gitsigns Select Args" },
             { "<leader>gt", "<cmd>Gitsigns toggle_signs<CR>",              desc = "Gitsigns Toggle Sings" },
@@ -14,6 +11,7 @@ return {
             { "<leader>gw", "<cmd>Gitsigns toggle_word_diff<CR>",          desc = "Gitsigns Toggle Word Diff" },
             { "<leader>gc", "<cmd>Gitsigns toggle_current_line_blame<CR>", desc = "Gitsigns Toggle Current Line Blame" },
             { "<leader>gf", "<cmd>Gitsigns diffthis<CR>",                  desc = "Gitsigns This Diif" }
-        }
+        },
+        opts = {}
     }
 }
