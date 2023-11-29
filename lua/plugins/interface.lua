@@ -8,6 +8,7 @@ return {
         keys = {
             { "<leader>ng", "<cmd>Neotree toggle<CR>", desc = "Toggle Neo Tree" },
             { "<leader>nf", "<cmd>Neotree float<CR>",  desc = "Open Float Neo Tree" },
+            { "<leader>nb", "<cmd>Neotree bottom<CR>", desc = "Open Bottom Neo Tree" },
         },
         init = function()
             if vim.fn.argc(-1) == 1 then
