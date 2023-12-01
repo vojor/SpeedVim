@@ -1,6 +1,7 @@
 return {
     {
         "catppuccin/nvim",
+        enabled = false,
         name = "catppuccin",
         priority = 1000,
         config = function()
@@ -39,5 +40,12 @@ return {
             })
             vim.cmd.colorscheme("catppuccin")
         end,
+    },
+    {
+        "alexmozaidze/palenight.nvim",
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme("palenight")
+        end
     }
 }
