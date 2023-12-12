@@ -39,13 +39,5 @@ return {
             })
             vim.cmd.colorscheme("catppuccin")
         end,
-    },
-    {
-        "alexmozaidze/palenight.nvim",
-        enabled = false,
-        priority = 1000,
-        config = function()
-            vim.cmd.colorscheme("palenight")
-        end
     }
 }

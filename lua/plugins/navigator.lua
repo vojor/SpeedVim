@@ -8,7 +8,7 @@ return {
                 "ray-x/guihua.lua",
                 build = "cd lua/fzy && make"
             },
-            { "nvim-lspconfig" }
+            { "neovim/nvim-lspconfig" }
         },
         opts = {
             debug = false,
