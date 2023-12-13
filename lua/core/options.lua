@@ -2,7 +2,7 @@
 vim.g.mapleader         = ";"
 vim.g.maplocalleader    = ","
 -- 设置python位置
-vim.g.python3_host_prog = "/usr/bin/python3"
+vim.g.python3_host_prog = "/usr/sbin/python3"
 -- 防止包裹
 vim.opt.wrap            = false
 -- 默认新窗口在右和下
