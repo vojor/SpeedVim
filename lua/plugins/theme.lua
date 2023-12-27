@@ -2,6 +2,7 @@ return {
     {
         "catppuccin/nvim",
         name = "catppuccin",
+        enabled = false,
         priority = 1000,
         config = function()
             require("catppuccin").setup({
@@ -39,5 +40,18 @@ return {
             })
             vim.cmd.colorscheme("catppuccin")
         end,
+    },
+    {
+        "scottmckendry/cyberdream.nvim",
+        -- enabled = false,
+        priority = 1000,
+        config = function()
+            require("cyberdream").setup({
+                transparent = true,
+                italic_comments = true,
+                hide_fillchars = true
+            })
+            vim.cmd.colorscheme("cyberdream")
+        end
     }
 }

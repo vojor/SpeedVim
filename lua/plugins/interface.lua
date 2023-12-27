@@ -58,7 +58,7 @@ return {
                 dashboard.button("c", " " .. " Config", "<cmd> e $MYVIMRC<CR>"),
                 dashboard.button("r", " " .. " Recent files", "<cmd> Telescope oldfiles <CR>"),
                 dashboard.button("g", " " .. " Find text", "<cmd> Telescope live_grep <CR>"),
-                dashboard.button("p", " " .. " Find projects", "<cmd> Telescope projects <CR>"),
+                dashboard.button("p", " " .. " Find projects", "<cmd> Telescope projects <CR>"),
                 dashboard.button("n", " " .. " New File", "<cmd> ene | startinsert<CR>"),
                 dashboard.button("l", "󰒲 " .. " Lazy", "<cmd> Lazy <CR>"),
                 dashboard.button("q", " " .. " Quit", "<cmd> qa <CR>"),
