@@ -43,7 +43,7 @@ return {
     },
     {
         "scottmckendry/cyberdream.nvim",
-        -- enabled = false,
+        enabled = false,
         priority = 1000,
         config = function()
             require("cyberdream").setup({
@@ -52,6 +52,24 @@ return {
                 hide_fillchars = true
             })
             vim.cmd.colorscheme("cyberdream")
+        end
+    },
+    {
+        "olimorris/onedarkpro.nvim",
+        -- enabled = false,
+        priority = 1000,
+        config = function()
+            require("onedarkpro").setup({
+                styles = {
+                    comments = "italic",
+                    keywords = "bold",
+                    functions = "bold"
+                },
+                options = {
+                    cursorline = true,
+                }
+            })
+            vim.cmd.colorscheme("onedark")
         end
     }
 }
