@@ -2,7 +2,7 @@
 vim.g.mapleader         = ";"
 vim.g.maplocalleader    = ","
 -- 设置python位置
-vim.g.python3_host_prog = "/usr/sbin/python3"
+vim.g.python3_host_prog = "/usr/bin/python"
 -- 防止包裹
 vim.opt.wrap            = false
 -- 默认新窗口在右和下
@@ -40,43 +40,43 @@ vim.opt.spelllang       = { 'en_us' }
 -- 鼠标支持
 vim.opt.mouse           = "a"
 -- 启用系统剪切板
-vim.opt.clipboard:append("unnamedplus")
+vim.opt.clipboard       = "unnamedplus"
 -- 缓存文件设置
-vim.opt.backup         = false
-vim.opt.writebackup    = false
-vim.opt.swapfile       = false
+vim.opt.backup          = false
+vim.opt.writebackup     = false
+vim.opt.swapfile        = false
 -- 显示特殊字符
-vim.opt.list           = true
+vim.opt.list            = true
 -- 特殊字符配置
-vim.opt.listchars      = "space:·,tab:▸ ,eol:↴"
+vim.opt.listchars       = "space:·,tab:▸ ,eol:↴"
 -- complete plus
-vim.opt.wildmenu       = true
+vim.opt.wildmenu        = true
 -- 终端24位色彩支持
-vim.opt.termguicolors  = true
+vim.opt.termguicolors   = true
 -- 设置缩进
-vim.opt.breakindent    = true
-vim.opt.autoindent     = true
-vim.opt.tabstop        = 4
-vim.opt.shiftwidth     = 4
-vim.opt.softtabstop    = 4
-vim.opt.expandtab      = true
-vim.opt.shiftround     = true
+vim.opt.breakindent     = true
+vim.opt.autoindent      = true
+vim.opt.tabstop         = 4
+vim.opt.shiftwidth      = 4
+vim.opt.softtabstop     = 4
+vim.opt.expandtab       = true
+vim.opt.shiftround      = true
 -- 插入括号时短暂跳转到另一半括号
-vim.opt.showmatch      = true
+vim.opt.showmatch       = true
 -- 光标在行首尾时<Left><Right>可以跳到下一行
-vim.opt.whichwrap      = "<,>,[,]"
+vim.opt.whichwrap       = "<,>,[,]"
 -- 在视觉块模式下，允许光标在没有文字的地方移动
-vim.opt.virtualedit    = "block"
+vim.opt.virtualedit     = "block"
 -- 补全最多显示16行
-vim.opt.pumheight      = 16
+vim.opt.pumheight       = 16
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
-vim.opt.showmode       = false
+vim.opt.showmode        = false
 -- 开启folding
-vim.opt.foldmethod     = "expr"
-vim.opt.foldexpr       = "nvim_treesitter#foldexpr()"
-vim.opt.foldlevel      = 99
-vim.opt.foldcolumn     = '1'
-vim.opt.foldlevelstart = 99
-vim.opt.foldenable     = true
+vim.opt.foldmethod      = "expr"
+vim.opt.foldexpr        = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel       = 99
+vim.opt.foldcolumn      = '1'
+vim.opt.foldlevelstart  = 99
+vim.opt.foldenable      = true
 -- 命令行高度
-vim.opt.cmdheight      = 0
+vim.opt.cmdheight       = 0
