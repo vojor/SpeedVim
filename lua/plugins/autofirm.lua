@@ -3,7 +3,7 @@ return {
     {
         "okuuva/auto-save.nvim",
         lazy = true,
-        event = { "InsertLeave", "BufWinLeave" },
+        event = { "InsertLeave", "TextChanged" },
         opts = {},
         keys = {
             { "<leader>at", "<cmd>ASToggle<CR>", desc = "Toggle Auto Save" }

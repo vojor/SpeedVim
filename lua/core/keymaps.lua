@@ -1,3 +1,4 @@
+vim.keymap.set("n", "<leader>ml", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
 -- 快捷命令
 vim.keymap.set('n', '<leader>ce', ':e<space>')
 vim.keymap.set("n", '<leader>cw', '<cmd>w<CR>')

@@ -72,8 +72,6 @@ vim.opt.pumheight       = 16
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
 vim.opt.showmode        = false
 -- 开启folding
-vim.opt.foldmethod      = "expr"
-vim.opt.foldexpr        = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel       = 99
 vim.opt.foldcolumn      = '1'
 vim.opt.foldlevelstart  = 99
