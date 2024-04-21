@@ -17,13 +17,13 @@ return {
         "hrsh7th/nvim-cmp",
         event = { "InsertEnter", "CmdlineEnter" },
         dependencies = {
-            { "onsails/lspkind.nvim",      lazy = true },
-            { "saadparwaiz1/cmp_luasnip",  lazy = true },
-            { "hrsh7th/cmp-nvim-lsp",      lazy = true },
-            { "hrsh7th/cmp-buffer",        lazy = true },
-            { "hrsh7th/cmp-cmdline",       lazy = true },
-            { "FelipeLema/cmp-async-path", lazy = true },
-            { "f3fora/cmp-spell",          lazy = true },
+            { "onsails/lspkind.nvim",                                 lazy = true },
+            { "saadparwaiz1/cmp_luasnip",                             lazy = true },
+            { "hrsh7th/cmp-nvim-lsp",                                 lazy = true },
+            { "hrsh7th/cmp-buffer",                                   lazy = true },
+            { "hrsh7th/cmp-cmdline",                                  lazy = true },
+            { url = "https://codeberg.org/FelipeLema/cmp-async-path", lazy = true },
+            { "f3fora/cmp-spell",                                     lazy = true },
         },
         config = function()
             local luasnip = require("luasnip")
@@ -67,10 +67,10 @@ return {
                     -- 绑定补全相关的按键
                     mapping = cmp.mapping.preset.insert({
                         ['<C-Space>'] = cmp.mapping.complete(),
-                        ['<C-e>'] = cmp.mapping.abort(),            --关闭补全
-                        ["<C-p>"] = cmp.mapping.select_prev_item(), --选择上一个
-                        ["<C-n>"] = cmp.mapping.select_next_item(), --选择下一个
-                        ["<CR>"] = cmp.mapping.confirm {            --确认选择
+                        ['<C-e>'] = cmp.mapping.abort(),
+                        ["<C-p>"] = cmp.mapping.select_prev_item(),
+                        ["<C-n>"] = cmp.mapping.select_next_item(),
+                        ["<CR>"] = cmp.mapping.confirm {
                             behavior = cmp.ConfirmBehavior.Replace,
                             select = true,
                         },
