@@ -7,11 +7,9 @@ return {
             { "gc", mode = { "v", "n" } },
             { "gb", mode = { "v", "n" } },
         },
-        config = function()
-            require("Comment").setup({
-                ignore = "^$",
-            })
-        end
+        opts = {
+            ignore = "^$",
+        }
     },
     -- TODO注释样式
     {
