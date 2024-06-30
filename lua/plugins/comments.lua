@@ -1,15 +1,9 @@
 return {
     -- 代码注释
     {
-        "numToStr/Comment.nvim",
-        lazy = true,
-        keys = {
-            { "gc", mode = { "v", "n" } },
-            { "gb", mode = { "v", "n" } },
-        },
-        opts = {
-            ignore = "^$",
-        }
+        "folke/ts-comments.nvim",
+        event = "VeryLazy",
+        opts = {}
     },
     -- TODO注释样式
     {

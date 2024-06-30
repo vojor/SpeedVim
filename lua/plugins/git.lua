@@ -3,6 +3,7 @@ return {
     {
         "lewis6991/gitsigns.nvim",
         event = "VeryLazy",
+        cmd = "Gitsigns",
         dependencies = { "plenary.nvim" },
         config = function()
             require("gitsigns").setup({
