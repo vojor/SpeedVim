@@ -30,31 +30,44 @@ return {
         "folke/which-key.nvim",
         lazy = true,
         event = "VeryLazy",
+        opts_extend = { "spec" },
         opts = {
-            defaults = {
-                mode = { "n", "v" },
-                ["<leader>a"] = { name = "+autotool" },
-                ["<leader>b"] = { name = "+buffer" },
-                ["<leader>c"] = { name = "+command" },
-                ["<leader>g"] = { name = "+git" },
-                ["<leader>h"] = { name = "+hop" },
-                ["<leader>i"] = { name = "+highlight" },
-                ["<leader>l"] = { name = "+lsp" },
-                ["<leader>lg"] = { name = "+lspsaga" },
-                ["<leader>m"] = { name = "+manager" },
-                ["<leader>n"] = { name = "+dir" },
-                ["<leader>r"] = { name = "+replace" },
-                ["<leader>s"] = { name = "+search" },
-                ["<leader>t"] = { name = "+zen" },
-                ["<leader>w"] = { name = "+window" },
-                ["<leader>x"] = { name = "+diagnostics/quickfix" }
+            defaults = {},
+            spec = {
+                {
+                    mode = { "n", "v" },
+                    { "<leader>a",  group = "autotool" },
+                    { "<leader>b",  group = "buffer" },
+                    { "<leader>c",  group = "command" },
+                    { "<leader>g",  group = "git" },
+                    { "<leader>i",  group = "highlight" },
+                    { "<leader>l",  group = "lsp" },
+                    { "<leader>lg", group = "lspsaga" },
+                    { "<leader>m",  group = "manager" },
+                    { "<leader>r",  group = "replace" },
+                    { "<leader>s",  group = "search" },
+                    { "<leader>t",  group = "zen" },
+                    { "<leader>w",  group = "window" },
+                    { "<leader>x",  group = "diagnostics/quickfix" }
+                }
             }
+        },
+        keys = {
+            {
+                "<leader>?",
+                function()
+                    require("which-key").show({ global = false })
+                end,
+                desc = "Buffer Local Keymaps (which-key)",
+            },
         },
         config = function(_, opts)
             local wk = require("which-key")
             wk.setup(opts)
-            wk.register(opts.defaults)
-        end
+            if not vim.tbl_isempty(opts.defaults) then
+                wk.register(opts.defaults)
+            end
+        end,
     },
     -- 显示缩进线
     {

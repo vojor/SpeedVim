@@ -5,6 +5,7 @@ return {
         version = "*",
         lazy = true,
         keys = {
+            { "<leader>h",  "",                      desc = "hop" },
             { "<leader>hw", "<cmd>HopWord<CR>",      desc = "Search And Jump Word" },
             { "<leader>hl", "<cmd>HopLine<CR>",      desc = "Search And Jump Line" },
             { "<leader>hc", "<cmd>HopChar1<CR>",     desc = "Search And Jump Char(input 1 char)" },
@@ -21,6 +22,7 @@ return {
         "AckslD/muren.nvim",
         lazy = true,
         keys = {
+            { "<leader>r",  "",                     desc = "replace" },
             { "<leader>rg", "<cmd>MurenToggle<CR>", desc = "Toggle Muren UI" },
             { "<leader>rf", "<cmd>MurenFresh<CR>",  desc = "Open Muren UI Fresh" },
             { "<leader>ru", "<cmd>MurenUnique<CR>", desc = "Unique Matches" },
