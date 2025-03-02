@@ -1,3 +1,3 @@
 # SpeedVim
 
-- Minimal configuration, quick start
+- Minimal configuration, quick start.
