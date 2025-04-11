@@ -49,7 +49,6 @@ return {
                             { name = "spell" },
                         }
                     ),
-                    -- 格式化补全菜单
                     formatting = {
                         format = lspkind.cmp_format(
                             {
@@ -64,7 +63,6 @@ return {
                             }
                         )
                     },
-                    -- 绑定补全相关的按键
                     mapping = cmp.mapping.preset.insert({
                         ['<C-Space>'] = cmp.mapping.complete(),
                         ['<C-e>'] = cmp.mapping.abort(),

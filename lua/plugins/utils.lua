@@ -74,7 +74,14 @@ return {
         "shellRaining/hlchunk.nvim",
         lazy = true,
         event = { "BufReadPost", "BufNewFile" },
-        opts = {}
+        opts = {
+            chunk = {
+                enable = true
+            },
+            indent = {
+                enable = true
+            }
+        }
     },
     -- 彩虹括号
     {

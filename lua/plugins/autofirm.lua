@@ -1,22 +1,26 @@
 return {
-    -- 自动保存
     {
         "okuuva/auto-save.nvim",
         lazy = true,
         event = { "InsertLeave", "TextChanged" },
-        opts = {},
+        opts = {
+            condition = function(buf)
+                if vim.fn.getbufvar(buf, "&buftype") ~= '' then
+                    return false
+                end
+                return true
+            end
+        },
         keys = {
             { "<leader>at", "<cmd>ASToggle<CR>", desc = "Toggle Auto Save" }
         }
     },
-    -- 自动匹配括号
     {
         "windwp/nvim-autopairs",
         lazy = true,
         event = "InsertEnter",
         opts = {}
     },
-    -- 自动恢复光标位置
     {
         "ethanholz/nvim-lastplace",
         lazy = true,
