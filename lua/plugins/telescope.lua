@@ -33,7 +33,6 @@ return {
                 }
             }
             require("telescope").load_extension("ui-select")
-            require("telescope").load_extension("notify")
             require("telescope").load_extension('file_browser')
             require('telescope').load_extension("projects")
         end,
@@ -44,7 +43,6 @@ return {
             { "<leader>sh", "<cmd>Telescope help_tags theme=ivy<CR>",  desc = "Find Help Tags" },
             { "<leader>so", "<cmd>Telescope oldfiles theme=ivy<CR>",   desc = "Find Old Files" },
             { "<leader>sm", "<cmd>Telescope marks theme=ivy<CR>",      desc = "Find Marks" },
-            { "<leader>sn", "<cmd>Telescope notify theme=ivy<CR>",     desc = "Find Notify History" },
             { "<leader>sp", "<cmd>Telescope projects<CR>",             desc = "Find Projects" },
             { "<leader>se", "<cmd>Telescope file_browser<CR>",         desc = "Find File browser Tree" },
         }

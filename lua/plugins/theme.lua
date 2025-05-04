@@ -26,7 +26,7 @@ return {
                     treesitter_context = true,
                     which_key = true,
                     neogit = false,
-                    notify = true,
+                    notify = false,
                     indent_blankline = {
                         enabled = true,
                         scope_color = "",
