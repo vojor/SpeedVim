@@ -6,7 +6,7 @@ return {
         build = ":TSUpdate",
         config = function()
             local ensure_installed = { "bash", "c", "cpp", "cmake", "lua", "markdown", "markdown_inline", "regex", "vim",
-                "yaml" }
+                "yaml", "zsh" }
             require("nvim-treesitter").install(ensure_installed):wait(300000)
             vim.api.nvim_create_autocmd('FileType', {
                 pattern = ensure_installed,
