@@ -8,7 +8,20 @@ return {
                 "ray-x/guihua.lua",
                 build = "cd lua/fzy && make"
             },
-            { "neovim/nvim-lspconfig" }
+            {
+                "neovim/nvim-lspconfig",
+                dependencies = {
+                    {
+                        "mason-org/mason-lspconfig.nvim",
+                        lazy = true,
+                        cmd = { "LspInstall", "LspUninstall" },
+                        dependencies = { "mason.nvim" },
+                        opts = {
+                            ensure_installed = {},
+                        },
+                    },
+                },
+            },
         },
         opts = {
             debug = false,
