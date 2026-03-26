@@ -26,7 +26,7 @@ return {
         opts = {
             debug = false,
             lsp = {
-                servers = { "vimls", "jsonls", "lua_ls", "bashls", "clangd", "yamlls" }
+                servers = { "vimls", "jsonls", "lua_ls", "bashls", "yamlls" }
             }
         }
     }
